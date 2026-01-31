@@ -28,7 +28,7 @@ jobs:
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm generate:icons
-      - run: un validate:pwa
+      - run: run validate:pwa
       - run: pnpm run build
       - name: Deploy
         uses: Azure/static-web-apps-deploy@v1
