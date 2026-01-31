@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Finance Hub Design System - Light Theme */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 20%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 25% 93%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 215 20% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 215 25% 90%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 20%;
+
+    --radius: 0.625rem;
+
+    /* Semantic Finance Colors */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 142 50% 94%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-muted: 38 80% 94%;
+    
+    --income: 142 71% 45%;
+    --income-foreground: 0 0% 100%;
+    --income-muted: 142 50% 94%;
+    
+    --expense: 0 72% 51%;
+    --expense-foreground: 0 0% 100%;
+    --expense-muted: 0 70% 96%;
+
+    /* Chart Colors */
+    --chart-1: 222 47% 20%;
+    --chart-2: 142 71% 45%;
+    --chart-3: 0 72% 51%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 262 52% 47%;
+    --chart-6: 199 89% 48%;
+
+    /* Sidebar */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 215 20% 75%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 222 40% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 40% 20%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.1), 0 2px 4px -2px hsl(222 47% 11% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.1), 0 4px 6px -4px hsl(222 47% 11% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(222 47% 11% / 0.1), 0 8px 10px -6px hsl(222 47% 11% / 0.1);
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 222 40% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 40% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 222 40% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 40% 18%;
+    --input: 222 40% 18%;
+    --ring: 212 27% 84%;
+
+    /* Semantic Finance Colors - Dark */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 142 50% 15%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-muted: 38 80% 15%;
+    
+    --income: 142 71% 50%;
+    --income-foreground: 0 0% 100%;
+    --income-muted: 142 50% 15%;
+    
+    --expense: 0 72% 55%;
+    --expense-foreground: 0 0% 100%;
+    --expense-muted: 0 70% 15%;
+
+    /* Chart Colors - Dark */
+    --chart-1: 217 91% 60%;
+    --chart-2: 142 71% 50%;
+    --chart-3: 0 72% 55%;
+    --chart-4: 38 92% 55%;
+    --chart-5: 262 52% 55%;
+    --chart-6: 199 89% 55%;
+
+    /* Sidebar - Dark */
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 215 20% 70%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 222 40% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 40% 12%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Shadows - Dark */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 8px 10px -6px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-income {
+    @apply text-[hsl(var(--income))];
+  }
+  
+  .text-expense {
+    @apply text-[hsl(var(--expense))];
+  }
+  
+  .bg-income {
+    @apply bg-[hsl(var(--income))];
+  }
+  
+  .bg-expense {
+    @apply bg-[hsl(var(--expense))];
+  }
+  
+  .bg-income-muted {
+    @apply bg-[hsl(var(--income-muted))];
+  }
+  
+  .bg-expense-muted {
+    @apply bg-[hsl(var(--expense-muted))];
+  }
+
+  .bg-success-muted {
+    @apply bg-[hsl(var(--success-muted))];
+  }
+
+  .bg-warning-muted {
+    @apply bg-[hsl(var(--warning-muted))];
+  }
+
+  .text-success {
+    @apply text-[hsl(var(--success))];
+  }
+
+  .text-warning {
+    @apply text-[hsl(var(--warning))];
+  }
+
+  /* Finance-specific animations */
+  @keyframes slide-up-fade {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes count-up {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up-fade {
+    animation: slide-up-fade 0.3s ease-out forwards;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+
+  .animate-count-up {
+    animation: count-up 0.5s ease-out forwards;
+  }
+
+  /* Stagger animation delays */
+  .delay-75 { animation-delay: 75ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-225 { animation-delay: 225ms; }
+  .delay-300 { animation-delay: 300ms; }
+}
